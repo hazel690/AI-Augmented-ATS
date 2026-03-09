@@ -45,7 +45,7 @@ if st.button("Find Top Talent"):
         
         st.success(f"Found {len(results)} matches!")
         for _, row in results.iterrows():
-            with st.expander(f"🎯 {row['Name']} - Match Score: {row['Match_Score']:.2f}"):
+            with st.expander(f" {row['Name']} - Match Score: {row['Match_Score']:.2f}"):
                 st.write(f"**Role:** {row['Applied_Role']} | **Experience:** {row['Years_Exp']} Years")
                 st.write(f"**Resume Snippet:** {row['Resume_Content']}")
                 st.progress(row['Match_Score'])
